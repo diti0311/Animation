@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bouncing Ball Animation</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #f0f0f0;
+      overflow: hidden;
+    }
+
+    .ball {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 50px;
+      background-color: #e63946;
+      border-radius: 50%;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+    @keyframes bounce {
+      0%   { top: 0; animation-timing-function: ease-in; }
+      50%  { top: 400px; animation-timing-function: ease-out; }
+      100% { top: 0; }
+    }
+
+    .bounce {
+      animation: bounce 1s infinite;
+    }
+  </style>
+</head>
+<body>
+  <div class="ball bounce"></div>
+</body>
+</html>
